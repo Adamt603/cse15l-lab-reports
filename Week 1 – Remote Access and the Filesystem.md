@@ -7,9 +7,6 @@ In this project we discuss how to download and setup VS code, remotely connect t
 
 
 ### Step One 
-
-<img width="600" height ="220" alt="firstPic.png" src="https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/firstPic.png?raw=true">
-
 ![Vs code download](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/firstPic.png?raw=true)
 - Go to [VS code download](https://code.visualstudio.com/) and click "Download Mac Universal"  
 
