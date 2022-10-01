@@ -10,6 +10,8 @@ In this project we discuss how to download and setup VS code, remotely connect t
 ![Vs code download](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/firstPic.png?raw=true)
 - Go to [VS code download](https://code.visualstudio.com/) and click "Download Mac Universal"  
 - Then go through all the prompts and finish installing the IDE.
+- Open it once the installation is complete and look for a tab at the top that says Terminal then click open new terminal. 
+- The terminal is where you will type all your git commands and ssh commands.
 
 ---
 
@@ -29,7 +31,10 @@ In this project we discuss how to download and setup VS code, remotely connect t
 
 ## How to moving files with scp
 ### Step Three
-
+- Next on your remote computer you will want to open the terminal and type scp fileName.extensionType severAddress:Directory
+- This will copy the file from your remote machine to the server.
+- When done you can remote SSH into the server to check to see if the file is in the directory you sent it to.
+![](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/Fourth%20image.png?raw=true)
 ---
 
 ## How to set up an SSH key
