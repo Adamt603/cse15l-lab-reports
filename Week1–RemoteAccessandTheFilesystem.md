@@ -48,7 +48,13 @@ In this project we discuss how to download and setup VS code, remotely connect t
 
 ## How to optimizing remote running
 ### Step Five
-
+- First, cd .ssh 
+- Second, vim config
+- Third, type Host NameYouWantToUse
+- Fourth, type HostName followed by the host address
+- Fifth, type User YourUserName
+![cd into .ssh](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/sixth%20pic.png?raw=true)
+![using vim to config file](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/seventh%20pic.png?raw=true)
 ---
 
 ### **Back to main page**
