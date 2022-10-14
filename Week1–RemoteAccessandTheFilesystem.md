@@ -25,12 +25,15 @@ In this project we discuss how to download and setup VS code, remotely connect t
 ![Finally logged on](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/Thrid%20pic.png?raw=true)
 - Now you are logged into the ieng6 remote server, where your code will be executed and your files will be stored. 
 
+---
 
+## Trying Some Commands
+### Step Three
 
 ---
 
 ## How to moving files with scp
-### Step Three
+### Step Four
 - Next on your remote computer you will want to open the terminal and type scp fileName.extensionType severAddress:Directory
 - This will copy the file from your remote machine to the server.
 - When done you can remote SSH into the server to check to see if the file is in the directory you sent it to.
@@ -38,7 +41,7 @@ In this project we discuss how to download and setup VS code, remotely connect t
 ---
 
 ## How to set up an SSH key
-### Step Four 
+### Step Five 
 - SSH keys allow for us to automatically login. This allows us to not have to type/remember our password every time we want to login.
 - First, we need to generate an SSH key using the RSA encryption algorithm. To do this we run the command ssh-keygen.
 - Second, we copy our ssh public key over to the server by using the command scp /Users/adampotter/.ssh/id_rsa.pub a1potter@ieng6.ucsd.edu:~/authorized_keys. This will copy our public key from our local machine to the remote server.
@@ -47,7 +50,7 @@ In this project we discuss how to download and setup VS code, remotely connect t
 ---
 
 ## How to optimizing remote running
-### Step Five
+### Step Six
 - First, cd .ssh 
 - Second, vim config
 - Third, type Host NameYouWantToUse
