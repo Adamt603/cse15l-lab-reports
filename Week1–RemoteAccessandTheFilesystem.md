@@ -29,6 +29,12 @@ In this project we discuss how to download and setup VS code, remotely connect t
 
 ## Trying Some Commands
 ### Step Three
+  - **ls -lat** gives us more info on files such as last modified date and time.
+  - **ls -a** shows all files plus the hidden ones.
+  - **touch fileName.fileExtension** creates an empty file in the current directory with the extension given.
+  ![ls -lat](Imagies/lab2Image1.png)
+  ![ls -a](Imagies/lab2Image4.png)
+  ![touch](Imagies/lab2Image3.png)
 
 ---
 
