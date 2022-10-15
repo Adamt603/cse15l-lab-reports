@@ -101,3 +101,46 @@ class Handler implements URLHandler{
 
 
 #  Week 3 - Bug fixing
+
+## Bug #1
+
+### The failure-inducing input (the code of the test)
+```@Test
+public void testReverse(){
+  int[] input2 = {1, 2, 3, 4, 5, 6, 7};
+  int[] whatWeWant = {7, 6, 5, 4, 3, 2, 1};
+  ArrayExamples.reverseInPlace(input2);
+  assertArrayEquals(whatWeWant, input2);
+}
+```
+---
+### The symptom (the failing test output)
+- It returned an arrary with all element values equal to zero
+---
+### The bug (the code fix needed)
+- The code should have been someNewArray[i] = arr[arr.length - i -1].
+---
+### Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
+- The bug causes this to happen because instead of assigning the values from the old array to some new array we overwrite the old one with the new one that has zeros for values.
+---
+
+## Bug #2
+
+### The failure-inducing input (the code of the test)
+
+---
+### The symptom (the failing test output)
+```
+@Test 
+  public void averageWithoutLowestTest(){
+    double[] input4 = {5, 5, 5, 4, 1};
+    assertEquals(3.0, ArrayExamples.averageWithoutLowest(input4), 0);
+  }
+  ```
+---
+### The bug (the code fix needed)
+- We should have a temp value that stores the lowest and checks it with other values so it only removes one value and not the rest.
+---
+### Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
+- The connection is that we are constantly throwing out the "lowest value" so if we have multiple of the same we run into issues.
+
