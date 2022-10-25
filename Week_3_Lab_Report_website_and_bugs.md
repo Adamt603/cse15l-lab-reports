@@ -128,32 +128,78 @@ public void testReverse(){
 ```
 ---
 ### The symptom (the failing test output)
-- It returned an arrary with all element values equal to zero
+![](Imagies/lab2and3/10.png)
+- The symptom was that we wanted 3 at position 4 in the array but we got five. This was because we over wrote the first half of the array with the second half thus losing the starting values in the array. 
 ---
 ### The bug (the code fix needed)
-- The code should have been someNewArray[i] = arr[arr.length - i -1].
+- This can easily be fixed by making a temp array and cloning the arr array into it. Then using the temp array to swap the values into the arr array.
+  ```
+    static void reverseInPlace(int[] arr) {
+    int[] tempArray = arr.clone();
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = tempArray[arr.length - i - 1];
+    }
+  }
+  ```
+
 ---
 ### Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
-- The bug causes this to happen because instead of assigning the values from the old array to some new array we overwrite the old one with the new one that has zeros for values.
+- The reason the bug causes this particular symptom is it takes an array and starts copying the furthest values to the front overwriting the front values so they are lost forever. So when we go to retrieve the value from position 4 we get five instead of 3 because thats what was written there.
 ---
 
 ## Bug #2
 
 ### The failure-inducing input (the code of the test)
-
+- The failure was that we should have gotten back ```["bob", "bbb","   b"]``` but we got back ```["    b", "bbb", "bob"]```
+```
+@Test
+    public void filterTest(){
+      List<String> list = new ArrayList();
+        list.add("bob");
+        list.add("apple");
+        list.add("");
+        list.add("bbb");
+        list.add("    b");
+        list = ListExamples.filter(list, new filters());
+        System.out.println(list.toString());
+        assertArrayEquals(["bob", "bbb","   b"], filter(list, new filters()).toString());
+        
+    }
+```
 ---
 ### The symptom (the failing test output)
+![failing test output](Imagies/lab2and3/11.png)
+---
+### The bug (the code fix needed)
+- There was so much wrong with this code. First, StringChecker was an interface meaning we needed a class to implement it. 
 ```
-@Test 
-  public void averageWithoutLowestTest(){
-    double[] input4 = {5, 5, 5, 4, 1};
-    assertEquals(3.0, ArrayExamples.averageWithoutLowest(input4), 0);
+class filters implements StringChecker{
+  public boolean checkString(String s){
+    return s.contains("b");
+  }
+}
+```
+- As you can see above I implemented the class and used the contains method to return true or false if the string contained the character. 
+
+- Futhermore, to return the correct order all we need to do is use ```Collections.reverse()``` method before returning our List  
+  
+  ```
+  class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return  Collections.reverse(result);
   }
   ```
 ---
-### The bug (the code fix needed)
-- We should have a temp value that stores the lowest and checks it with other values so it only removes one value and not the rest.
----
 ### Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
-- The connection is that we are constantly throwing out the "lowest value" so if we have multiple of the same we run into issues.
+- One of the major symptoms is, we don't even have a class for StringChecker. Meaning you can't make an instance of it because its an interface. Thus leading to un-working code period. But once you fix that we are left with a backwards out put that needs fixing using a reverse method. There are many ways at which you could fix the bug of the list being saved backwards but that is one of them. 
 
