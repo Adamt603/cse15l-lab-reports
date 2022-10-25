@@ -20,7 +20,7 @@ In this project we discuss how to download and setup VS code, remotely connect t
 ### Step Two
 ![Remote SSH into ieng6 server](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/Second%20pic.png?raw=true)
 - Open up Visual Studio Code and then open up a new terminal.
-- Type ` ssh cs15lfa22ii@ieng6.ucsd.edu ` for me it is ii for you it will be something different.
+- Type ```ssh cs15lfa22ii@ieng6.ucsd.edu``` for me it is ii for you it will be something different.
 - You will be prompted to type in your password, type it in.
 ![Finally logged on](Imagies/lab1Picture1.png)
 - Now you are logged into the ieng6 remote server, where your code will be executed and your files will be stored. 
@@ -40,7 +40,7 @@ In this project we discuss how to download and setup VS code, remotely connect t
 
 ## How to moving files with scp
 ### Step Four
-- Next on your remote computer you will want to open the terminal and type ` scp fileName.extensionType` severAddress:Directory
+- Next on your remote computer you will want to open the terminal and type ```scp fileName.extensionType``` severAddress:Directory
 - This will copy the file from your remote machine to the server.
 - When done you can remote SSH into the server to check to see if the file is in the directory you sent it to.
 ![](https://github.com/Adamt603/cse15l-lab-reports/blob/main/Imagies/Fourth%20image.png?raw=true)
