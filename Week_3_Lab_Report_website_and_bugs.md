@@ -24,18 +24,31 @@ In this lab we built a website with methods that were called on by path inputs t
 
 ### changing values
 - **listOfStrings** changes when ever the user requests to add a new value.
-- **mates** changes temporarily to store the values that matches the user input.
+- **matches** changes temporarily to store the values that matches the user input.
 
 ---
 
 ![image](Imagies/lab2and3/2.png)
+- In the image above matches receives the String value ```"anewstringtoadd"``` then stores the value in listOfStrings. 
+  
 ![image](Imagies/lab2and3/3.png)
+- In the image above we can see the url and the query that got us our output.
+  
 ![image](Imagies/lab2and3/4.png)
+- In the image above matches receives the String value ```"pineapple"``` then stores the value in listOfStrings. 
+  
 ![image](Imagies/lab2and3/5.png)
+- In the image above we can see the url and the query that got us our output.
+  
 ![image](Imagies/lab2and3/6.png)
+- In the image above matches receives the String value ```"apple"``` then stores the value in listOfStrings. 
+  
 ![image](Imagies/lab2and3/7.png)
+- In the image above we can see the url and the query that got us our output.
 ![image](Imagies/lab2and3/8.png)
+- In the above image we can see all of the inputs output that we searched for.
 ![image](Imagies/lab2and3/9.png)
+- In the above image we can see the string we searched for in our array which was ```"app"```
 
 ```
 import java.util.*;
