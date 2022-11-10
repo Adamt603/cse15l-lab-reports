@@ -7,8 +7,8 @@
 
   - [Week 3 Lab Report website making and bug fixing](https://adamt603.github.io/cse15l-lab-reports/Week_3_Lab_Report_website_and_bugs)
 
-  - [Week5LabReport](https://adamt603.github.io/cse15l-lab-reports/Week5LabReport)
+  - [Week 5 Lab Report](https://adamt603.github.io/cse15l-lab-reports/Week5LabReport)
   
-  - [week 7lab report](https://adamt603.github.io/cse15l-lab-reports/Week7LabReport_vim_and_bash)
+  - [week 7 lab report working with vim](https://adamt603.github.io/cse15l-lab-reports/Week7LabReport_vim_and_bash)
 
 ![image](https://cdn.britannica.com/58/94458-050-0C18D00E/Yosemite-National-Park-California.jpg)
