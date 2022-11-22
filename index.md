@@ -11,4 +11,6 @@
   
   - [week 7 lab report working with vim](https://adamt603.github.io/cse15l-lab-reports/Week7LabReport_vim_and_bash)
 
+  - [Week 8 lab report grade.sh script](https://adamt603.github.io/cse15l-lab-reports/Week_8_Lab_Report_bash_grade)
+
 ![image](https://cdn.britannica.com/58/94458-050-0C18D00E/Yosemite-National-Park-California.jpg)
