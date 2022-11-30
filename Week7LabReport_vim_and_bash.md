@@ -4,12 +4,34 @@
 
 ## In DocSearchServer.java, change the name of the start parameter of getFiles, and all of its uses, to instead be called base.
 
+### Explaining %s
+```:[range]s/{pattern}/{string}/[flags] [count]```
+- [range] is the # of lines we want to evaluate 
+- [count] is the # of occurrences of {pattern} we want to change to {string}
+- [flags] modify the command like g changes all occurrences for all lines while % changes all occurrences for the whole file.
+
+## Explaining :w
+- :w is used to save your changes to the file as vim creates a copy and the file is left unchanged till saved.
+- :x is even cooler in my opinion as it saves and quits. But some might use :wq for that.
+
+**In short this %s command finds all "pattern" and changes them to "string" kind of like find and change all.**
+
+
 ```vim DocSearchServer.java```
 - opens DocSearchServer.java in vim
+![before changes](Imagies/week7lab/1.png)
+- This is what the DocSearch file looks like before the command is ran 
+
+![command typed](Imagies/week7lab/2.png)
+- Then what you do is type each key %+s+/+s+t+a+r+t+/+b+a+s+e and then right after press enter 
+
 ```:%s/start/base<Enter>:w```
 - Find each occurrence of 'base' (in all lines), and replace it with 'start'.
 - ![Show changes](Imagies/week7lab/Screenshot%202022-11-10%20at%201.17.09%20PM.png)
 - This image shows the changes after executing the command.
+
+![saving the changes](Imagies/week7lab/3.png)
+- Then after executing the pervious command save the changes by typing : + w this will save the changes to the file.
 
 --- 
 
